@@ -34,7 +34,7 @@ pub fn random_gen(){
     println!("{}",number);
 }
 
-pub fn higher_or_ower(){
+pub fn higher_or_lower(){
     // Challenge: Gen random number and play high or low
    
     let mut win = false;
