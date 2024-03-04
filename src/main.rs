@@ -1,6 +1,6 @@
-pub mod chapter9;
+pub mod chapter12;
 
 fn main() {
-    chapter9::test_sum();
+    chapter12::struct_lifetime()
 }
 

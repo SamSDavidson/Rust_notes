@@ -1,4 +1,4 @@
-{ // Borrowing References
+ 
     fn borrowing_references() {
         let rocket_fuel = String::from("RP-1");
         let length = process_fuel(&rocket_fuel);
@@ -13,8 +13,7 @@
         let length = propellant.len();
         length
     }
-}
-{ // Mutable References
+    // Mutable References
     fn mutable_references() {
         let mut rocket_fuel = String::from("RP-1");
         let length = process_fuel(&mut rocket_fuel);
@@ -30,8 +29,8 @@
         let length = propellant.len();
         length
     }
-}
-{ // Dangling References
+
+// Dangling References
     fn dangling_refs() {
         let rocket_fuel = produce_fuel();
         println!("The rocket fuel is {}", rocket_fuel);
@@ -42,8 +41,8 @@
         let new_fuel = String::from("RP-1");
         new_fuel
     }
-}
-{ //Reference Slices
+
+//Reference Slices
     fn slice_ref() {
         let message = String::from("Greetings from earth!");
         println!("Message is: {}", message);
@@ -62,8 +61,8 @@
         let inner_planets: &[i32] = &planets[..4];
         print!("Inner planets are: {:?}", inner_planets);
     }
-}
-{ // Slice as input to funciton
+
+// Slice as input to funciton
 
     //First example is referencing an entire word and sendit back only a slice
     fn slice_as_param() {
@@ -103,8 +102,7 @@
         }
         &s
     }
-}
-{
+
     fn challenge_issued() {
         let test1 = "We need more space.";
         assert_eq!(trim_spaces(test1), "We need more space.");
@@ -154,7 +152,7 @@
         }
         return &no_space[first_char..last_char];
     }
-    fn instructor_trim_spaces(s: &str)->{
+    fn instructor_trim_spaces(s: &str)-> &s {
         let mut start = 0;
         for (index, character) in s.chars().enumerate() {
             if character != ' '{
@@ -174,4 +172,3 @@
         &s[start..end]
     }
 
-}
