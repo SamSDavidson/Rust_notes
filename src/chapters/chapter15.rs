@@ -41,3 +41,4 @@ pub fn hash_map(){
     println!("Barron: {:?}", barron_missions);
     println!("Missions Flown: {:?}", missions_flown);
 }
+
